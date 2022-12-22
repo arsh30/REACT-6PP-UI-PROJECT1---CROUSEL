@@ -1,0 +1,41 @@
+@import "./colors.scss";
+nav {
+  //   main and h1 both are block level elemen
+  //   border: 1px solid crimson;
+  width: 100%;
+  padding: 1rem; // 1 rem = 16px root element
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly,
+                                 all available space is placed between the first and last 
+                                 items, pushing both items to opposite edges of the 
+                                 container
+                                 */
+  align-items: center;
+  position: sticky;
+  background-color: $first;
+  top: 0%;
+  z-index: 1000;
+
+  > h1 {
+    text-transform: uppercase;
+  }
+
+  > main {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    > a {
+      color: $dark;
+      margin: 1rem;
+
+      &:hover {
+        color: $third;
+      }
+    }
+  }
+}
+
+* {
+  //   border: 1px solid crimson;
+}

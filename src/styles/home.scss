@@ -1,0 +1,203 @@
+@import "./colors.scss";
+.home {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  border-radius: 0 0 200px 200px;
+
+  > main {
+    position: absolute;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    justify-content: center;
+
+    > h1 {
+      font: 400 6rem "Roboto";
+      color: white;
+    }
+    > p {
+      font: 900 1rem "Roboto";
+      color: white;
+    }
+  }
+
+  &::before {
+    // pseudo selector
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: no-repeat center/auto url("../assets/1.png");
+    filter: blur(3px);
+    border-radius: 0 0 200px 200px;
+  }
+}
+
+.home2 {
+  height: 100vh;
+  width: 100%;
+  background-color: $second;
+  padding: 500px 0; // top bottom, lft right
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -200px;
+  // - taki jo img hai upr hoje, taki upr se bordr diya hai vo cover hoje taki
+
+  > img {
+    width: 30%;
+    animation: imgUp 0.7s linear infinite alternate;
+    // imgUp ye animation create krege, 0.s ke liye chlana h, linear hogi, infinite chlti
+    // rhegi or alternatively chlegi means shuru se end tak and end se piche tak
+  }
+
+  > div {
+    // border: 1px solid red;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    height: 100vh;
+
+    > p {
+      color: $first;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font: 100 1.2rem cursive;
+    }
+  }
+}
+
+@keyframes imgUp {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.home3 {
+  //   border: 1px solid green;
+  width: 100%;
+  height: 120vh;
+  background-color: $second;
+  margin-top: -200px;
+  display: flex;
+
+  > div {
+    width: 70%;
+    height: 100vh;
+    background-color: $first;
+
+    // Niche wali lines jitna andr content hai vo sara center pr hojega and
+    // border radius aajega
+    border-radius: 0 200px 200px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    > h1 {
+      text-transform: uppercase;
+      border-bottom: 2px solid $dark;
+      padding: 0.5rem;
+      width: 15rem;
+      color: $dark;
+    }
+
+    > p {
+      padding: 5rem;
+      letter-spacing: 1px;
+      word-spacing: 5px;
+      line-height: 170%;
+      font: italic 100 1.2rem cursive;
+    }
+  }
+}
+
+/*
+Diff between sticky and fixed
+- abhi nav sticky hai 
+- agr hum sticky krte to nav ki presence khtm nhi hoti
+agr ye position relative dete, to itna space ye gherti hi , dikhri hai space 
+or usko gheregi bhi
+
+but jb position absolute denge toh uski jo physical existance hai vo khtm hojegi, 
+niche wala conten upr aajega overflow hoega
+
+fixed -> means agr opacity kam krke dekhege to pta lgeag ki uski existance hai nahi 
+        and chipak gya hai
+        fixed is basically combination of sticky and absolute
+ 
+sticky -> means vo jagh ghere hai or sth chipka bhi rhe, check krege by opacity kam krke
+
+*/
+
+.home4 {
+  width: 100%;
+  height: 100vh;
+  background-color: $second;
+  display: flex;
+  justify-content: flex-end;
+
+  > div {
+    background-color: $third;
+    border-radius: 200px 0 0 200px; //[topLeft, topright, bottom right, bottom left]
+    width: 70%;
+    height: 70vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; // coz 2 cheeze hai isme heading and article
+    align-items: center;
+    justify-content: center;
+
+    > h1 {
+      color: $first;
+      text-transform: uppercase;
+      width: 140px;
+      border-bottom: 2px solid $first;
+      padding: 0.5rem;
+    }
+
+    > article {
+      display: flex;
+      margin: 2rem 0;
+      flex-wrap: wrap; // coz boht sare div hai , 1 circle bnega, so jese screen km hogi
+      //   unka size kam hojega
+      justify-content: center;
+      > div {
+        animation: imgUp 0.7s linear infinite alternate;
+        margin: 1rem;
+        height: 10rem;
+        width: 10rem;
+        background-color: $first;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $dark;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          filter: invert(1);
+        }
+
+        svg {
+          font-size: 4rem;
+        }
+
+        p {
+          font: 900 1.2rem cursive;
+        }
+      }
+    }
+  }
+}

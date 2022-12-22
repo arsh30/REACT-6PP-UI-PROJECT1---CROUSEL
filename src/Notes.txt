@@ -1,0 +1,79 @@
+-  npm i react-router-dom react-icons
+-  clear all files except app.js and index.js
+-  clear app.js file 
+- make folder assets - [for Img], components, styles [- all Scss files]
+- difference between sass and scss , we use scss 
+- scss  -> isme curly brackets hote hai 
+eg:  p {
+            background-color:red 
+          }
+eg 2: p {
+            a {
+                text-align:center;
+            }
+        }
+
+- sass -> isme curly bracket nahi hote 
+eg: p 
+        background color:red
+
+eg 2: p 
+        backgroundColor:red 
+             a
+                    text align:center
+
+
+- make file App.scss $ colors.scss 
+
+-----------------------------------------------------------------------
+
+1) Navbar 
+Code -> 
+
+2) Home Section -> 
+  {/* basicaly a website that provide service */}
+
+
+3) for scrolling -> like #tag dete hai jispr scroll hokr chle jaye 
+means nav me vo id denge /#id jispr hum chahte hai scroll hokr chle jaye
+so in react install krege -> taki link ki trah reload na ho, aur anchor ki trh 
+kisi container ko target kr paye
+npm i react-router-hash-link
+
+4) crousel -> npm i react-responsive-carousel ->3.2.23
+
+5) How to deploy on vercel
+- npm i -g vercel 
+- vercel login -> github jidr se kra hua hai
+- type-> vercel [press enter]
+- setupp and deploye -> YES 
+- which scope -> jo bhi username hoga vo 
+- linked to existing project -> n [coz new project h]
+- project name - reactone 
+-directory -> ./ jo directory me open h usi me rhene denge 
+- want to modify these setting -> N 
+
+- deploy honi start hojegi 
+- vercel folder create hojega hmari diretory me
+
+--------------------------------------------------------------
+ https://react-one-alpha.vercel.app
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
